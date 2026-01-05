@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+/* Background hitam transparan */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Box popup */
+.modal {
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: scaleIn .3s ease;
+}
+
+.modal h2 {
+    text-align: center;
+    color: #b91c1c;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Tombol Kirim */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px 0;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(239, 68, 68, 0.35);
+}
+
+/* Hover */
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(239, 68, 68, 0.45);
+    background: linear-gradient(135deg, #DC2626, #B91C1C);
+}
+
+/* Saat ditekan */
+button[type="submit"]:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
+}
+
+/* Fokus (aksesibilitas) */
+button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+}
+
+
+/* Animasi */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
